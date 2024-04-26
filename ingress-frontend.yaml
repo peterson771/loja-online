@@ -7,7 +7,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: http://loja-online.34.29.27.144.nip.io/
+  - host: loja-online.34.29.27.144.nip.io/
     http:
       paths:
       - backend:
