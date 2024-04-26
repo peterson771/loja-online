@@ -1,0 +1,21 @@
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: frontend-external
+  namespace: projeto
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: http://loja-online.34.29.27.144.nip.io/
+    http:
+      paths:
+      - backend:
+          service:
+            name: frontend-external
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
+status:
+  loadBalancer: {}
